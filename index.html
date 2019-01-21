@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="datedropper.css" rel="stylesheet" type="text/css" />
+
     
     
 </head>
@@ -15,11 +17,30 @@
           <ul>
                   <li>Flights</li>
                   <li>Hotels</li>
-                  <li>Car rental</li>
+                  <li>Car Rental</li>
 
           </ul>
         </div>
+
+<div class="box">
+        <div><span>From:</span><span>To:</span><span>Depart:</span><span>Return:</span> </div>
+        <input type="text" />
+        <input type="text" />
+        <input id="depart" type="text" data-default-date="11-13-2016" data-lock="from" />
+        <input id="return" type="text" data-default-date="11-13-2016" data-lock="from" data-large-mode="true"/>
+
+
+</div>
+
+
+
     <script type="text/javascript" src="main.js"> </script>
+    <script src="datedropper.js"></script>
+<script>
+        $('#depart').dateDropper();
+        $('#return').dateDropper();
+	</script>
+
 
 </body>
 </html>
