@@ -3,28 +3,51 @@ body {
     padding:0px;
     background: url(1.jpg) no-repeat ;
     background-size: cover;
+  
+  
+  }
+  
+  
+  .box {
+    position: absolute ;
+    top:50%;
+    left:42%;
+    transform: translate(-50%,-50%);
+    
+  }
+  .box input {
+    height: 25px;
+    width:190px;
+    border-radius:5px;
+    cursor: pointer;
 
+  }
+  
+  div span{
+    margin-right:160px;
+    color:rgba(255, 255, 255, 0.637);
+    font-family:monospace;
+    font-size:15px;
+  }
 
-}
-
-.menu{
+  .menu{
     background-color:transparent;
     border-bottom: 2px solid rgba(255, 255, 255, 0.637);
     position:absolute;
     top:0;
     width:100%;
     height: 50px;
-
-}
-
-ul {
+  
+  }
+  
+  .listtt {
     list-style: none;
     float: right;
     margin-right:20px;
-
-}
-
-ul li {
+  
+  }
+  
+  .listtt li {
     display:inline-block;
     font-size:15px;
     
@@ -32,25 +55,12 @@ ul li {
     margin-right:40px;
     text-align: right;
     color:rgba(255, 255, 255, 0.637);
+    cursor: pointer;
+  
+  
+  }
 
-
-}
-
-.box {
-    position: absolute ;
-    top:50%;
-    left:42%;
-    transform: translate(-50%,-50%);
-}
-.box input {
-    height: 25px;
-    width:190px;
-    border-radius:5px;
-}
-
-div span{
-    margin-right:160px;
-    color:rgba(255, 255, 255, 0.637);
-    font-family:monospace;
-    font-size:15px;
-}
+  .listtt li:hover{
+      color:black;
+  }
+  
