@@ -23,7 +23,7 @@
 <div class="box"  id="Flights">
         <div><span>From:</span><span>To:</span><span>Depart:</span><span>Return:</span> </div>
         
-        <input type="text" />
+        <input type="text" id="from"/>
         <input typpe="text" />
         <input id="depart" type="text" data-default-date="1-25-2019" data-lock="from" data-large-mode="true"/>
         <input   id="return" type="text" data-default-date="1-25-2019"  data-large-mode="true" data-lock="from"
@@ -39,6 +39,30 @@
         $("#depart").dateDropper();
         $("#return").dateDropper();
 
+var request= new XMLHttpRequest();
+request.open('GET','https://iatacodes.org/api/v6/airports?api_key=1dae00e1-e8a9-4f2f-8303-d7cc6775f9c8',true);
+request.onload=function (){
+        var data=JSON.parse(this.response);
+        
+if (request.status >=200 && request.status <400){
+        console.log(data);
+}
+else {
+        console.log("ooops")
+}
+}
+
+
+
+
+
+        $("#from").on("change",function(e){
+console.log(e.currentTarget.value);
+
+
+
+});
+request.send();
 	</script>
 
 
